@@ -1,0 +1,21 @@
+<div fxLayout="row" fxFlex>
+  <div fxFlex>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input autofocus matInput type="text" [ngModel]="contato.nome"  disabled/>
+    </mat-form-field>
+  </div>
+  <div fxFlex>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="text" [ngModel]="contato.email"  disabled/>
+    </mat-form-field>
+  </div>
+  <div fxFlex>
+    <mat-form-field>
+      <mat-label>Telefone</mat-label>
+      <input matInput type="text" [ngModel]="contato.telefone" disabled/>
+    </mat-form-field>
+  </div>
+</div>
+<button mat-raised-button routerLink="/contatos">Voltar</button>

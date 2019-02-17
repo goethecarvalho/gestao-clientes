@@ -1,0 +1,26 @@
+<form [formGroup]="form" (submit)="salvar()">
+  <div fxLayout="row" fxFlex>
+    <div fxFlex>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input autofocus matInput type="text" formControlName="nome" />
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email" />
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <mat-label>Telefone</mat-label>
+        <input matInput type="text" formControlName="telefone" />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button type="submit" [disabled]="form.invalid">
+    Salvar
+  </button>
+  <button mat-raised-button routerLink="/contatos">Voltar</button>
+</form>

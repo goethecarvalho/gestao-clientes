@@ -1,0 +1,21 @@
+<form [formGroup]="form" (submit)="login()">
+  <div fxLayout="row" fxFlex>
+    <div fxFlex>
+      <mat-form-field>
+        <mat-label>Usuário</mat-label>
+        <input autofocus matInput type="text" formControlName="usuario" />
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input autofocus matInput type="password" formControlName="senha" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <div fxFlex>
+      <button mat-raised-button type="submit" [disabled]="form.invalid">Entrar</button>
+    </div>
+  </div>
+</form>

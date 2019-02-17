@@ -1,0 +1,10 @@
+<button mat-raised-button type="submit" [routerLink]="['gestao']">
+  Novo Contato
+</button>
+<ul>
+  <li *ngFor="let contato of contatos">
+    <span [routerLink]="['detalhes', contato.id]">{{ contato.nome }}</span>
+    <button mat-raised-button [routerLink]="['gestao/editar', contato.id]">Editar</button>
+    <button mat-raised-button (click)="excluir(contato.id)">Excluir</button>
+  </li>
+</ul>
