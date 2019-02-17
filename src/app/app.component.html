@@ -1,9 +1,4 @@
-<div class="containerX">
-  <div class="header" *ngIf="(usuario$ | async) as usuario">
-    <button mat-raised-button (click)="logout()">
-      Sair
-    </button>
-    <small>{{ usuario.nome }}</small>
-  </div>
+<div class="containe">
+  <app-header></app-header>
   <router-outlet></router-outlet>
 </div>

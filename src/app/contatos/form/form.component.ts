@@ -23,7 +23,7 @@ export class FormComponent implements OnInit {
     this.form = this.fb.group({
       id: [0],
       nome: ["", Validators.required],
-      email: ["", Validators.required],
+      email: ["", Validators.required, Validators.email],
       telefone: ["", Validators.required]
     });
     const id = this.route.snapshot.params["id"];

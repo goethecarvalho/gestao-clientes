@@ -1,21 +1,52 @@
-<form [formGroup]="form" (submit)="login()">
-  <div fxLayout="row" fxFlex>
-    <div fxFlex>
-      <mat-form-field>
-        <mat-label>Usuário</mat-label>
-        <input autofocus matInput type="text" formControlName="usuario" />
-      </mat-form-field>
+<div class="container">
+  <form [formGroup]="form" (submit)="login()">
+    <div class="row">
+      <div class="col"></div>
+      <mat-card class="login-card">
+        <mat-card-header color="primary">
+          <mat-card-title>Agenda de Contatos</mat-card-title>
+          <mat-card-subtitle>Insira seus dados para fazer login.</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="col ml-3">
+            <div class="row">
+              <div class="col-xs-12">
+                <mat-form-field>
+                  <mat-label>Usuário</mat-label>
+                  <input
+                    autofocus
+                    matInput
+                    type="text"
+                    formControlName="usuario"
+                    matAutosize
+                  />
+                  <mat-hint>admin</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <mat-form-field>
+                  <mat-label>Senha</mat-label>
+                  <input
+                    autofocus
+                    matInput
+                    type="password"
+                    formControlName="senha"
+                  />
+                  <mat-hint>123</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+            <mat-card-actions>
+              <button mat-raised-button type="submit" [disabled]="form.invalid" color="primary">
+                Entrar
+              </button>
+            </mat-card-actions>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <div class="col"></div>
     </div>
-    <div fxFlex>
-      <mat-form-field>
-        <mat-label>Senha</mat-label>
-        <input autofocus matInput type="password" formControlName="senha" />
-      </mat-form-field>
-    </div>
-  </div>
-  <div fxLayout="row">
-    <div fxFlex>
-      <button mat-raised-button type="submit" [disabled]="form.invalid">Entrar</button>
-    </div>
-  </div>
-</form>
+  </form>
+</div>

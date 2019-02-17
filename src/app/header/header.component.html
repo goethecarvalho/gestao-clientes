@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" *ngIf="(usuario$ | async) as usuario">
+  <mat-toolbar-row>
+    <span>Agenda de Contatos</span>
+    <span class="header-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon class="header-icon mr-4">person</mat-icon>{{ usuario.nome | uppercase}}
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">Sair</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

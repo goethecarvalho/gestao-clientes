@@ -1,21 +1,21 @@
-<div fxLayout="row" fxFlex>
+<div class="container mt-4">
   <div fxFlex>
     <mat-form-field>
       <mat-label>Nome</mat-label>
-      <input autofocus matInput type="text" [ngModel]="contato.nome"  disabled/>
+      <input autofocus matInput type="text" [ngModel]="contato.nome" disabled />
     </mat-form-field>
   </div>
   <div fxFlex>
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <input matInput type="text" [ngModel]="contato.email"  disabled/>
+      <input matInput type="text" [ngModel]="contato.email" disabled />
     </mat-form-field>
   </div>
   <div fxFlex>
     <mat-form-field>
       <mat-label>Telefone</mat-label>
-      <input matInput type="text" [ngModel]="contato.telefone" disabled/>
+      <input matInput type="text" [ngModel]="contato.telefone" disabled />
     </mat-form-field>
   </div>
+  <button mat-raised-button routerLink="/contatos">Voltar</button>
 </div>
-<button mat-raised-button routerLink="/contatos">Voltar</button>

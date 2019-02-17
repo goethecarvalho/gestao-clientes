@@ -9,7 +9,8 @@ import { ContatosService } from "./contatos.service";
 })
 export class ContatosComponent implements OnInit {
   private contatos: Contato[] = [];
-
+  private colunasEmExibicao: string[] = ["nome"];
+  expandedElement: null;
   constructor(private contatosService: ContatosService) {}
 
   async ngOnInit() {
