@@ -10,4 +10,4 @@ App de agenda de contatos desenvolvido com Angular 7, Material e IndexedDB
 
 1 - Execute `npm install` para instalar os pacotes da aplicação
 
-2 - Execute `ng serve` para executar o app em modo desenvolvimento. Abra o navegador em `http://localhost:4200/`.
+2 - Execute `npm run start` para executar o app em modo desenvolvimento. Abra o navegador em `http://localhost:4200/`.
