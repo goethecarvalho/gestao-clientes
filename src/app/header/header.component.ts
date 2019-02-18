@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
 
   async ngOnInit() {
     this.usuario$ = this.loginService.obterUsuarioLogado();
+    this.usuario$.subscribe(usuario => {
+      this.usuarioLogado = usuario;
+    });
   }
 
   logout() {

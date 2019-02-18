@@ -15,19 +15,19 @@ export class LoginComponent implements OnInit {
   public loginModel: Login;
   public form: FormGroup;
 
-
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private loginService: LoginService
   ) {
+    this.loginService.logout();
     this.form = fb.group({
       usuario: ["", Validators.required],
       senha: ["", Validators.compose([Validators.required])]
     });
   }
 
-  ngOnInit() {}
+  async ngOnInit() {}
 
   async login() {
     const login = this.form.value as Login;

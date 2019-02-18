@@ -1,30 +1,61 @@
 <div class="container mt-4">
-  <div class="container mt-4">
+  <mat-card>
     <form [formGroup]="form" (submit)="salvar()">
-      <div fxLayout="row" fxFlex>
-        <div fxFlex>
-          <mat-form-field>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
             <mat-label>Nome</mat-label>
-            <input autofocus matInput type="text" formControlName="nome" />
+            <input
+              autofocus
+              matInput
+              type="text"
+              formControlName="nome"
+              maxlength="50"
+            />
+            <mat-hint
+              *ngIf="
+                !form.controls.nome.pristine && form.controls.nome.required
+              "
+              >Campo obrigatório</mat-hint
+            >
           </mat-form-field>
         </div>
-        <div fxFlex>
-          <mat-form-field>
-            <mat-label>Email</mat-label>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
+            <mat-label>E-mail</mat-label>
             <input matInput type="text" formControlName="email" />
+            <mat-hint
+              *ngIf="
+                !form.controls.email.pristine && form.controls.email.invalid
+              "
+              >E-mail inválido</mat-hint
+            >
           </mat-form-field>
         </div>
-        <div fxFlex>
-          <mat-form-field>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
             <mat-label>Telefone</mat-label>
             <input matInput type="number" formControlName="telefone" />
           </mat-form-field>
         </div>
       </div>
-      <button mat-raised-button type="submit" [disabled]="form.invalid">
-        Salvar
-      </button>
-      <button mat-raised-button routerLink="/contatos">Voltar</button>
+      <div class="text-right">
+        <button
+          mat-raised-button
+          type="submit"
+          [disabled]="form.invalid"
+          color="primary"
+        >
+          Salvar
+        </button>
+        <button mat-raised-button routerLink="/contatos" class="ml-4">
+          Voltar
+        </button>
+      </div>
     </form>
-  </div>
+  </mat-card>
 </div>

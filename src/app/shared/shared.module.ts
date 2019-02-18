@@ -8,8 +8,8 @@ import {
   MatAutocompleteModule,
   MatOptionModule,
   MatMenuModule,
-  MatSnackBar,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule
 } from "@angular/material";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
@@ -24,7 +24,8 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     MatAutocompleteModule,
     MatOptionModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,
@@ -34,7 +35,8 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ]
 })
 export class SharedModule {}

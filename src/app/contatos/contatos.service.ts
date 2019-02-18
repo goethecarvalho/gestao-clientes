@@ -14,22 +14,12 @@ export class ContatosService {
   public contatos!: Dexie.Table<Contato, number>;
 
   async adicionar(contato: Contato): Promise<Contato> {
-    // this.idbService.transaction("rw", this.idbService.contatos, async () => {
-    //   debugger;
-    //   const id = await this.idbService.contatos.add(contato);
-    //   contato.id = id;
-    // });
-    // return contato;
     const id = await this.contatos.add(contato);
     contato.id = id;
     return contato;
   }
 
   async atualizar(contato: Contato): Promise<Contato> {
-    // this.idbService.transaction("rw", this.idbService.contatos, async () => {
-    //   this.idbService.contatos.update(contato.id, contato);
-    // });
-    // return contato;
     await this.contatos.update(contato.id,contato);
     return contato;
   }
