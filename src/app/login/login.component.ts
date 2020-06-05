@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     const login = this.form.value as Login;
     const usuarioAutenticado = await this.loginService.autenticar(login);
     if (usuarioAutenticado) {
-      this.router.navigate(["contatos"]);
+      this.router.navigate(["clientes"]);
     } else {
       console.log("verificar os dados");
     }

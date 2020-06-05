@@ -7,6 +7,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [FormComponent],
-  imports: [CommonModule, FormRoutingModule,SharedModule]
+  imports: [CommonModule, FormRoutingModule, SharedModule]
 })
 export class FormModule {}

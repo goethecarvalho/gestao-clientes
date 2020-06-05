@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import Dexie from 'dexie';
-import { Usuario } from '../models/usuario';
+import { Usuario } from '../../models/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +8,10 @@ import { Usuario } from '../models/usuario';
 export class IdbService extends Dexie {
 
   constructor() {
-    super("agenda");
+    super("core");
     this.version(1).stores({
       login: "++id,nome",
-      contatos: "++id,nome"
+      clientes: "++id,nome"
     });
   }
 }

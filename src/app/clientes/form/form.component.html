@@ -24,13 +24,53 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <mat-form-field class="form-input">
-            <mat-label>E-mail</mat-label>
-            <input matInput type="text" formControlName="email" />
+            <mat-label>Endereço</mat-label>
+            <input
+              autofocus
+              matInput
+              type="text"
+              formControlName="endereco"
+              maxlength="50"
+            />
             <mat-hint
               *ngIf="
-                !form.controls.email.pristine && form.controls.email.invalid
+                !form.controls.endereco.pristine && form.controls.endereco.required
               "
-              >E-mail inválido</mat-hint
+              >Campo obrigatório</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
+            <mat-label>Bairro</mat-label>
+            <input
+              autofocus
+              matInput
+              type="text"
+              formControlName="bairro"
+              maxlength="50"
+            />
+            <mat-hint
+              *ngIf="
+                !form.controls.bairro.pristine && form.controls.bairro.required
+              "
+              >Campo obrigatório</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
+            <mat-label>Contato</mat-label>
+            <input matInput type="text" formControlName="contato" />
+            <mat-hint
+              *ngIf="
+                !form.controls.contato.pristine && form.controls.contato.required
+              "
+              >Campo obrigatório</mat-hint
             >
           </mat-form-field>
         </div>
@@ -52,7 +92,7 @@
         >
           Salvar
         </button>
-        <button mat-raised-button routerLink="/contatos" class="ml-4">
+        <button mat-raised-button routerLink="/clientes" class="ml-4">
           Voltar
         </button>
       </div>

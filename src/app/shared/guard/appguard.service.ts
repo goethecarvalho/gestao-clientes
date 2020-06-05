@@ -5,7 +5,7 @@ import {
   RouterStateSnapshot,
   Router
 } from "@angular/router";
-import { LoginService } from "../login/login.service";
+import { LoginService } from "../../login/login.service";
 
 @Injectable({
   providedIn: "root"
@@ -16,7 +16,7 @@ export class AppGuardService implements CanActivate {
     state: RouterStateSnapshot
   ): Promise<boolean> {
     if (await this.loginService.existeUsuarioLogado()) {
-      this.router.navigate(["contatos"]);
+      this.router.navigate(["clientes"]);
       return false;
     }
     return true;

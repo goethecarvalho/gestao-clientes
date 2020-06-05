@@ -3,7 +3,7 @@ import { Login } from "../models/login";
 import { Usuario } from "../models/usuario";
 import { Router } from "@angular/router";
 import { Observable, BehaviorSubject } from "rxjs";
-import { IdbService } from "../shared/idb.service";
+import { IdbService } from "../shared/indexeddb/idb.service";
 import Dexie from "dexie";
 
 @Injectable({

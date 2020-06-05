@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { LoginGuardService } from "./login/login-guard.service";
-import { AppGuardService } from "./shared/appguard.service";
+import { AppGuardService } from "./shared/guard/appguard.service";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -11,8 +11,8 @@ const routes: Routes = [
     canActivate: [AppGuardService]
   },
   {
-    path: "contatos",
-    loadChildren: "./contatos/contatos.module#ContatosModule",
+    path: "clientes",
+    loadChildren: "./clientes/clientes.module#ClientesModule",
     canActivate: [LoginGuardService]
   }
 ];

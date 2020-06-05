@@ -6,8 +6,8 @@
       <mat-icon class="header-icon mr-4">person</mat-icon>{{ usuarioLogado.nome | uppercase}}
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/contatos">Clientes</button>
-      <button mat-menu-item (click)="logout()">Agendamentos</button>
+      <button mat-menu-item routerLink="/Clientes">Clientes</button>
+      <button mat-menu-item>Agendamentos</button>
       <button mat-menu-item (click)="logout()">Sair</button>
     </mat-menu>
   </mat-toolbar-row>

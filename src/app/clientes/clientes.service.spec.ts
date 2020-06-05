@@ -1,12 +1,11 @@
 import { TestBed } from '@angular/core/testing';
+import { ClientesService } from './clientes.service';
 
-import { AppguardService } from './appguard.service';
-
-describe('AppguardService', () => {
+describe('ClientesService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AppguardService = TestBed.get(AppguardService);
+    const service: ClientesService = TestBed.get(ClientesService);
     expect(service).toBeTruthy();
   });
 });
