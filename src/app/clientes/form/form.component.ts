@@ -26,7 +26,8 @@ export class FormComponent implements OnInit {
       endereco: [null, Validators.required],
       bairro: [null, Validators.required],
       contato: [null, Validators.required],
-      telefone: [null, Validators.required]
+      telefone: [null, Validators.required],
+      indicacao: [null, Validators.required]
     });
     const id = this.route.snapshot.params["id"];
     if (id) {

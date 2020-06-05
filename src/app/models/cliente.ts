@@ -5,4 +5,5 @@ export class Cliente {
   public bairro: string = "";
   public contato: string = "";
   public telefone: number;
+  public indicacao: number;
 }

@@ -1,4 +1,4 @@
-# Agenda de Contatos
+# Gestão de Clientes
 
 App de gestão de clientes desenvolvido com Angular 7, Material e IndexedDB
 
