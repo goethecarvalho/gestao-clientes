@@ -1,6 +1,6 @@
 # Agenda de Contatos
 
-App de agenda de contatos desenvolvido com Angular 7, Material e IndexedDB
+App de gestão de clientes desenvolvido com Angular 7, Material e IndexedDB
 
 ## Requisitos
 `node v10`
