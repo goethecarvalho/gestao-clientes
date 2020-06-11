@@ -6,4 +6,5 @@ export class Cliente {
   public contato: string = "";
   public telefone: number;
   public indicacao: number;
+  public dataCadastro: string = "";
 }

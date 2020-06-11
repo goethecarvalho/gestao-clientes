@@ -8,8 +8,17 @@ import { MatTableModule, MatListModule } from "@angular/material";
 import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
-  declarations: [ClientesComponent, DialogComponent],
-  imports: [CommonModule, ClientesRoutingModule, SharedModule, MatTableModule, MatListModule],
+  declarations: [
+    ClientesComponent, 
+    DialogComponent
+  ],
+  imports: [
+    CommonModule, 
+    ClientesRoutingModule, 
+    SharedModule, 
+    MatTableModule, 
+    MatListModule
+  ],
   entryComponents:[DialogComponent]
 })
 export class ClientesModule {}

@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormComponent } from './form.component';
 
-describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+import { AcompanhamentosComponent } from './acompanhamentos.component';
+
+describe('AcompanhamentosComponent', () => {
+  let component: AcompanhamentosComponent;
+  let fixture: ComponentFixture<AcompanhamentosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
+      declarations: [ AcompanhamentosComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(AcompanhamentosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

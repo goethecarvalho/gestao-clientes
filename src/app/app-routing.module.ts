@@ -14,6 +14,10 @@ const routes: Routes = [
     path: "clientes",
     loadChildren: "./clientes/clientes.module#ClientesModule",
     canActivate: [LoginGuardService]
+  },
+  {
+    path: "acompanhamentos",
+    loadChildren: "./acompanhamentos/acompanhamentos.module#AcompanhamentosModule"
   }
 ];
 
