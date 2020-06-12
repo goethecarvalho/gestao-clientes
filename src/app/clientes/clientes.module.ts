@@ -5,12 +5,12 @@ import { ClientesRoutingModule } from "./clientes-routing.module";
 import { ClientesComponent } from "./clientes.component";
 import { SharedModule } from "../shared/shared.module";
 import { MatTableModule, MatListModule } from "@angular/material";
-import { DialogComponent } from './dialog/dialog.component';
+import { ClienteDialogComponent } from './cliente-dialog/cliente-dialog.component';
 
 @NgModule({
   declarations: [
     ClientesComponent, 
-    DialogComponent
+    ClienteDialogComponent
   ],
   imports: [
     CommonModule, 
@@ -19,6 +19,6 @@ import { DialogComponent } from './dialog/dialog.component';
     MatTableModule, 
     MatListModule
   ],
-  entryComponents:[DialogComponent]
+  entryComponents:[ClienteDialogComponent]
 })
 export class ClientesModule {}

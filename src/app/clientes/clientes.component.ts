@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Cliente } from "../models/cliente";
 import { MatDialog } from "@angular/material";
-import { DialogComponent } from "./dialog/dialog.component";
+import { ClienteDialogComponent } from "./cliente-dialog/cliente-dialog.component";
 import { ClientesService } from './clientes.service';
 
 @Component({
@@ -32,7 +32,7 @@ export class ClientesComponent implements OnInit {
   }
 
   openDialog(cliente: Cliente): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
+    const dialogRef = this.dialog.open(ClienteDialogComponent, {
       width: "250px",
       data: { nome: cliente.nome, id: cliente.id }
     });

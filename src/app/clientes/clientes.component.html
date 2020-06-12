@@ -3,7 +3,7 @@
     <button
       mat-stroked-button
       type="submit"
-      [routerLink]="['gestao']"
+      [routerLink]="['cliente-form']"
       color="primary"
     >
       Novo Cliente
@@ -14,7 +14,7 @@
       <th mat-header-cell *matHeaderCellDef>Relação de Clientes</th>
       <td mat-cell *matCellDef="let element" class=" text-xs-12">
         <div class="row">
-          <div class="col cliente-cell mt-2" [routerLink]="['detalhes', element.id]" title="Detalhes do cliente">
+          <div class="col cliente-cell mt-2" [routerLink]="['cliente-detalhes', element.id]" title="Detalhes do cliente">
               {{ element.nome }}
           </div>
           <div class="col cliente-cell mt-2" title="Bairro">
@@ -35,7 +35,7 @@
           <div class="col text-right">
               <button
               mat-icon-button
-              [routerLink]="['gestao/editar', element.id]"
+              [routerLink]="['cliente/editar', element.id]"
               title="Editar"
             >
               <mat-icon>edit</mat-icon>

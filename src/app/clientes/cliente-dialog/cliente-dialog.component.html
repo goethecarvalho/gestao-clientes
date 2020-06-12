@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Um cliente será removido!</h1>
+<div mat-dialog-content>
+  <p>
+    Deseja realmente remover o cliente: <strong>{{ data.nome }}?</strong>
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>Cancelar</button>
+  <button mat-button [mat-dialog-close]="data.id" color="primary">Sim</button>
+</div>

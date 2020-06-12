@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   {
     path: "acompanhamentos",
-    loadChildren: "./acompanhamentos/acompanhamentos.module#AcompanhamentosModule"
+    loadChildren: "./acompanhamentos/acompanhamentos.module#AcompanhamentosModule",
+    canActivate: [LoginGuardService]
   }
 ];
 

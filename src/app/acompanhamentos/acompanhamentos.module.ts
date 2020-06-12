@@ -1,19 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatTableModule, MatListModule } from '@angular/material';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { SharedModule } from '../shared/shared.module';
-import { AcompanhamentosComponent } from './acompanhamentos.component';
-import { AcompanhamentosRoutingModule } from './acompanhamentos-routing.module';
+import { AcompanhamentosRoutingModule } from "./acompanhamentos-routing.module";
+import { AcompanhamentosComponent } from "./acompanhamentos.component";
+import { SharedModule } from "../shared/shared.module";
+import { MatTableModule, MatListModule } from "@angular/material";
+import { AcompanhamentoDialogComponent } from './acompanhamento-dialog/acompanhamento-dialog.component';
 
 @NgModule({
-  declarations: [ AcompanhamentosComponent],
+  declarations: [
+    AcompanhamentosComponent, 
+    AcompanhamentoDialogComponent
+  ],
   imports: [
-    CommonModule,
-    SharedModule,
-    MatTableModule,
-    MatListModule,
-    AcompanhamentosRoutingModule
-  ]
+    CommonModule, 
+    AcompanhamentosRoutingModule, 
+    SharedModule, 
+    MatTableModule, 
+    MatListModule
+  ],
+  entryComponents:[AcompanhamentoDialogComponent]
 })
-export class AcompanhamentosModule { }
+export class AcompanhamentosModule {}

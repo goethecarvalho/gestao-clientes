@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <mat-card class="detalhes-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Nome: {{ cliente.nome }}</mat-card-title>
+      <mat-card-subtitle>Endereço: {{ cliente.endereco }}</mat-card-subtitle>
+      <mat-card-subtitle>Bairro: {{ cliente.bairro }}</mat-card-subtitle>
+      <mat-card-subtitle>Contato: {{ cliente.contato }}</mat-card-subtitle>
+      <mat-card-subtitle>Telefone: {{ cliente.telefone }}</mat-card-subtitle>
+      <mat-card-subtitle>Indicação: {{ cliente.indicacao }}</mat-card-subtitle>
+      <mat-card-subtitle>Data Cadastro: {{ cliente.dataCadastro }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="text-right">
+      <button mat-raised-button routerLink="/acompanhamentos">Voltar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

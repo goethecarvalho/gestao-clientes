@@ -2,19 +2,19 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Cliente } from "src/app/models/cliente";
 import { Router, ActivatedRoute } from "@angular/router";
-import { ClientesService } from '../clientes.service';
+import { AcompanhamentosService } from '../acompanhamentos.service';
 
 @Component({
   selector: "app-form",
-  templateUrl: "./form.component.html",
-  styleUrls: ["./form.component.scss"]
+  templateUrl: "./acompanhamento-form.component.html",
+  styleUrls: ["./acompanhamento-form.component.scss"]
 })
-export class FormComponent implements OnInit {
+export class AcompanhamentoFormComponent implements OnInit {
   private form: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    private clientesService: ClientesService,
+    private acompanhamentosService: AcompanhamentosService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -39,16 +39,16 @@ export class FormComponent implements OnInit {
   salvar() {
     const cliente = this.form.value as Cliente;
     if (cliente.id) {
-      this.clientesService.atualizar(cliente);
+      this.acompanhamentosService.atualizar(cliente);
     } else {
       delete cliente.id;
-      this.clientesService.adicionar(cliente);
+      this.acompanhamentosService.adicionar(cliente);
     }
-    this.router.navigate(["/clientes"]);
+    this.router.navigate(["/acompanhamentos"]);
   }
 
   async obterCliente(id: number) {
-    const cliente = await this.clientesService.obterPorId(id);
+    const cliente = await this.acompanhamentosService.obterPorId(id);
     this.form.setValue(cliente);
   }
 }
