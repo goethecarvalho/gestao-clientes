@@ -1,0 +1,14 @@
+[
+	{
+		"id": "1",
+		"nome": "Ligação"
+	},
+    {
+		"id": "2",
+		"nome": "WhatsApp"
+	},
+    {
+		"id": "3",
+		"nome": "E-mail"
+	}
+]

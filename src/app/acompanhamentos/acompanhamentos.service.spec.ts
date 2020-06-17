@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AcompanhamentosService } from './acompanhamentos.service';
 
-describe('ClientesService', () => {
+describe('AcompanhamentosService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Cliente } from "src/app/models/cliente";
 import { ActivatedRoute } from "@angular/router";
+
 import { AcompanhamentosService } from '../acompanhamentos.service';
+import { Acompanhamento } from 'src/app/models/acompanhamento';
 
 @Component({
   selector: "app-detalhes",
@@ -9,7 +10,7 @@ import { AcompanhamentosService } from '../acompanhamentos.service';
   styleUrls: ["./acompanhamento-detalhes.component.scss"]
 })
 export class AcompanhamentoDetalhesComponent implements OnInit {
-  private cliente: Cliente = new Cliente();
+  private acompanhamento: Acompanhamento = new Acompanhamento();
   constructor(
     private acompanhamentosService: AcompanhamentosService,
     private route: ActivatedRoute
@@ -18,11 +19,11 @@ export class AcompanhamentoDetalhesComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.params["id"];
     if (id) {
-      this.obterCliente(Number(id));
+      this.obterAcompanhamento(Number(id));
     }
   }
 
-  async obterCliente(id: number) {
-    this.cliente = await this.acompanhamentosService.obterPorId(id);
+  async obterAcompanhamento(id: number) {
+    this.acompanhamento = await this.acompanhamentosService.obterPorId(id);
   }
 }

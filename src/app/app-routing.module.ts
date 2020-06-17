@@ -7,17 +7,17 @@ const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   {
     path: "login",
-    loadChildren: "./login/login.module#LoginModule",
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
     canActivate: [AppGuardService]
   },
   {
-    path: "clientes",
-    loadChildren: "./clientes/clientes.module#ClientesModule",
+    path: "empresas",
+    loadChildren: () => import('./empresas/empresas.module').then(m => m.EmpresasModule),
     canActivate: [LoginGuardService]
   },
   {
     path: "acompanhamentos",
-    loadChildren: "./acompanhamentos/acompanhamentos.module#AcompanhamentosModule",
+    loadChildren: () => import('./acompanhamentos/acompanhamentos.module').then(m => m.AcompanhamentosModule),
     canActivate: [LoginGuardService]
   }
 ];

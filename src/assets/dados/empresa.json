@@ -1,0 +1,42 @@
+[
+	{
+		"id": "1",
+		"nome": "BEM KEU DISSE PIZZARIA LTDA"
+	},
+    {
+		"id": "2",
+		"nome": "BS TOWER COMERCIO DE MATERIAIS ELETRONICOS"
+	},
+    {
+		"id": "3",
+		"nome": "CR MOURA"
+	},
+    {
+		"id": "4",
+		"nome": "H79 GRILL"
+	},
+    {
+		"id": "5",
+		"nome": "JL DISTRIBUIDORA DE ALIMENTOS"
+    },
+    {
+		"id": "6",
+		"nome": "LOS BRABOS PIZZARIA"
+	},
+    {
+		"id": "7",
+		"nome": "OLV COMERCIO DE ARTIGOS DE MODA LTDA"
+	},
+    {
+		"id": "8",
+		"nome": "RG INSTALACAO E MANUTENCAO EQUIPAMENTOS"
+	},
+    {
+		"id": "9",
+		"nome": "SR PÃO PADARIA"
+	},
+    {
+		"id": "10",
+		"nome": "MC COMERCIO DE MOVEIS E ESTOFADOS LTDA"
+	}
+]

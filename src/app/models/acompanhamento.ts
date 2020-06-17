@@ -3,4 +3,5 @@ export class Acompanhamento {
   public cliente: string = "";
   public descricao: string = "";
   public data: string = "";
+  public meioContato: string = "";
 }

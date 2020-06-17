@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: "", redirectTo: "criar", pathMatch: "full" },
   { path: "criar", component: AcompanhamentoFormComponent },
   { path: "editar/:id", component: AcompanhamentoFormComponent },
-  { path: "detalhes/:id", component: AcompanhamentoFormComponent }
+  { path: "acompanhamento-detalhes/:id", component: AcompanhamentoFormComponent }
 ];
 
 @NgModule({

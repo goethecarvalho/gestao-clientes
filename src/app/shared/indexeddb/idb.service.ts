@@ -8,10 +8,11 @@ import { Usuario } from '../../models/usuario';
 export class IdbService extends Dexie {
 
   constructor() {
-    super("core");
+    super("gestao-clientes");
     this.version(1).stores({
       login: "++id,nome",
-      clientes: "++id,nome"
+      empresas: "++id,nome",
+      acompanhamentos: "++id,nome"
     });
   }
 }

@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Cliente } from "src/app/models/cliente";
 import { Router, ActivatedRoute } from "@angular/router";
+
 import { AcompanhamentosService } from '../acompanhamentos.service';
+import { Acompanhamento } from 'src/app/models/acompanhamento';
+import { DropdownService } from 'src/app/shared/services/dropdown.service';
 
 @Component({
   selector: "app-form",
@@ -11,44 +13,51 @@ import { AcompanhamentosService } from '../acompanhamentos.service';
 })
 export class AcompanhamentoFormComponent implements OnInit {
   private form: FormGroup;
+  empresas = [];
+  meiosContato = [];
 
   constructor(
     private fb: FormBuilder,
     private acompanhamentosService: AcompanhamentosService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private dropdownService: DropdownService
   ) {}
 
   ngOnInit() {
+
+    this.dropdownService.getEmpresas()
+      .subscribe(dados => this.empresas = dados);
+
+    this.dropdownService.getMeiosContato()
+      .subscribe(dados => this.meiosContato = dados);
+
     this.form = this.fb.group({
       id: [0],
-      nome: ["", Validators.required],
-      endereco: [null, Validators.required],
-      bairro: [null, Validators.required],
-      contato: [null, Validators.required],
-      telefone: [null, Validators.required],
-      indicacao: [null, Validators.required],
-      dataCadastro: [null, Validators.required]
+      cliente: [null, Validators.required],
+      descricao: [null, Validators.required],
+      data: [null, Validators.required],
+      meioContato: [null, Validators.required]
     });
     const id = this.route.snapshot.params["id"];
     if (id) {
-      this.obterCliente(Number(id));
+      this.obterAcompanhamento(Number(id));
     }
   }
 
   salvar() {
-    const cliente = this.form.value as Cliente;
-    if (cliente.id) {
-      this.acompanhamentosService.atualizar(cliente);
+    const acompanhamento = this.form.value as Acompanhamento;
+    if (acompanhamento.id) {
+      this.acompanhamentosService.atualizar(acompanhamento);
     } else {
-      delete cliente.id;
-      this.acompanhamentosService.adicionar(cliente);
+      delete acompanhamento.id;
+      this.acompanhamentosService.adicionar(acompanhamento);
     }
     this.router.navigate(["/acompanhamentos"]);
   }
 
-  async obterCliente(id: number) {
-    const cliente = await this.acompanhamentosService.obterPorId(id);
-    this.form.setValue(cliente);
+  async obterAcompanhamento(id: number) {
+    const acompanhamento = await this.acompanhamentosService.obterPorId(id);
+    this.form.setValue(acompanhamento);
   }
 }

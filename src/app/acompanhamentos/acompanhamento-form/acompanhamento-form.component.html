@@ -4,17 +4,52 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <mat-form-field class="form-input">
-            <mat-label>Nome</mat-label>
+            <mat-label>Empresa</mat-label>
+            <select matNativeControl required class="form-control" id="cliente" formControlName="cliente">
+              <option *ngFor="let empresa of empresas" [value]="empresa.id">{{ empresa.nome }}</option>
+            </select>
+            <mat-hint
+              *ngIf="
+                !form.controls.cliente.pristine && form.controls.cliente.required
+              "
+              >Campo obrigatório</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
+            <mat-label>Acompanhamento</mat-label>
+            <textarea 
+              autofocus 
+              matInput 
+              placeholder="Acompanhamento" 
+              formControlName="descricao"
+            ></textarea>
+            <mat-hint
+              *ngIf="
+                !form.controls.descricao.pristine && form.controls.descricao.required
+              "
+              >Campo obrigatório</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
+            <mat-label>Data</mat-label>
             <input
               autofocus
               matInput
               type="text"
-              formControlName="nome"
+              formControlName="data"
               maxlength="50"
             />
             <mat-hint
               *ngIf="
-                !form.controls.nome.pristine && form.controls.nome.required
+                !form.controls.data.pristine && form.controls.data.required
               "
               >Campo obrigatório</mat-hint
             >
@@ -24,99 +59,19 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <mat-form-field class="form-input">
-            <mat-label>Endereço</mat-label>
-            <input
-              autofocus
-              matInput
-              type="text"
-              formControlName="endereco"
-              maxlength="50"
-            />
+            <mat-label>Meio Contato</mat-label>
+            <select matNativeControl required class="form-control" id="meioContato" formControlName="meioContato">
+              <option *ngFor="let meioContato of meiosContato" [value]="meioContato.id">{{ meioContato.nome }}</option>
+            </select>
             <mat-hint
               *ngIf="
-                !form.controls.endereco.pristine && form.controls.endereco.required
+                !form.controls.meioContato.pristine && form.controls.meioContato.required
               "
               >Campo obrigatório</mat-hint
             >
           </mat-form-field>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <mat-form-field class="form-input">
-            <mat-label>Bairro</mat-label>
-            <input
-              autofocus
-              matInput
-              type="text"
-              formControlName="bairro"
-              maxlength="50"
-            />
-            <mat-hint
-              *ngIf="
-                !form.controls.bairro.pristine && form.controls.bairro.required
-              "
-              >Campo obrigatório</mat-hint
-            >
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <mat-form-field class="form-input">
-            <mat-label>Contato</mat-label>
-            <input matInput type="text" formControlName="contato" />
-            <mat-hint
-              *ngIf="
-                !form.controls.contato.pristine && form.controls.contato.required
-              "
-              >Campo obrigatório</mat-hint
-            >
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <mat-form-field class="form-input">
-            <mat-label>Telefone</mat-label>
-            <input matInput type="text" formControlName="telefone" />
-            <mat-hint
-              *ngIf="
-                !form.controls.telefone.pristine && form.controls.telefone.required
-              "
-              >Campo obrigatório</mat-hint
-            >
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <mat-form-field class="form-input">
-            <mat-label>Indicação</mat-label>
-            <input matInput type="text" formControlName="indicacao" />
-            <mat-hint
-              *ngIf="
-                !form.controls.indicacao.pristine && form.controls.indicacao.required
-              "
-              >Campo obrigatório</mat-hint
-            >
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <mat-form-field class="form-input">
-            <mat-label>Data Cadastro</mat-label>
-            <input matInput type="text" formControlName="dataCadastro" />
-            <mat-hint
-              *ngIf="
-                !form.controls.dataCadastro.pristine && form.controls.dataCadastro.required
-              "
-              >Campo obrigatório</mat-hint
-            >
-          </mat-form-field>
-        </div>
-      </div>
+      </div>      
       <div class="text-right">
         <button
           mat-raised-button

@@ -9,33 +9,28 @@
       Novo Acompanhamento
     </button>
   </div>
-  <table mat-table [dataSource]="clientes" class="mat-elevation-z8 mt-4">
-    <ng-container matColumnDef="nome">
+  <table><th>Relação de Acompanhamentos</th></table>
+  <table mat-table [dataSource]="acompanhamentos" class="mat-elevation-z8 mt-4">
+    <ng-container matColumnDef="descricao">
       <th mat-header-cell *matHeaderCellDef>Relação de Acompanhamentos</th>
       <td mat-cell *matCellDef="let element" class=" text-xs-12">
         <div class="row">
-          <div class="col cliente-cell mt-2" [routerLink]="['detalhes', element.id]" title="Detalhes do cliente">
-              {{ element.nome }}
+          <div class="col cliente-cell mt-2" [routerLink]="['acompanhamento-detalhes', element.id]" title="Detalhes do Acompanhamento">
+              {{ element.cliente }}
           </div>
-          <div class="col cliente-cell mt-2" title="Bairro">
-            {{ element.bairro }}
+          <div class="col cliente-cell mt-2" title="Descrição">
+            {{ element.descricao }}
           </div>
-          <div class="col cliente-cell mt-2" title="Contato">
-            {{ element.contato }}
+          <div class="col cliente-cell mt-2" title="Data COntato">
+            {{ element.data }}
           </div>
-          <div class="col cliente-cell mt-2" title="Telefone">
-            {{ element.telefone }}
-          </div>
-          <div class="col cliente-cell mt-2" title="Indicação">
-            {{ element.indicacao }}
-          </div>
-          <div class="col cliente-cell mt-2" title="Data Cadastro">
-            {{ element.dataCadastro }}
+          <div class="col cliente-cell mt-2" title="Meio Contato">
+            {{ element.meioContato }}
           </div>
           <div class="col text-right">
               <button
               mat-icon-button
-              [routerLink]="['cliente/editar', element.id]"
+              [routerLink]="['acompanhamento-form/editar', element.id]"
               title="Editar"
             >
               <mat-icon>edit</mat-icon>

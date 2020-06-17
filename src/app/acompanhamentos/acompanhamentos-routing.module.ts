@@ -4,8 +4,8 @@ import { AcompanhamentosComponent } from "./acompanhamentos.component";
 
 const routes: Routes = [
   { path: "", component: AcompanhamentosComponent },
-  { path: "acompanhamento-form", loadChildren:"./acompanhamento-form/acompanhamento-form.module#AcompanhamentoFormModule" },
-  { path: "acompanhamento-detalhes/:id", loadChildren:"./acompanhamento-detalhes/acompanhamento-detalhes.module#AcompanhamentoDetalhesModule" },
+  { path: "acompanhamento-form", loadChildren:() => import('./acompanhamento-form/acompanhamento-form.module').then(m => m.AcompanhamentoFormModule) },
+  { path: "acompanhamento-detalhes/:id", loadChildren:() => import('./acompanhamento-detalhes/acompanhamento-detalhes.module').then(m => m.AcompanhamentoDetalhesModule) },
 ];
 
 @NgModule({

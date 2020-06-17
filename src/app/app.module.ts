@@ -1,12 +1,13 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatToolbarModule, MatIconModule, MatMenuModule } from "@angular/material";
+
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { HeaderComponent } from "./shared/header/header.component";
-import { MatToolbarModule, MatIconModule, MatMenuModule } from "@angular/material";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -17,7 +18,8 @@ import { MatToolbarModule, MatIconModule, MatMenuModule } from "@angular/materia
     SharedModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
 
   providers: [],

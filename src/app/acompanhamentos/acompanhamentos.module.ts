@@ -4,7 +4,7 @@ import { CommonModule } from "@angular/common";
 import { AcompanhamentosRoutingModule } from "./acompanhamentos-routing.module";
 import { AcompanhamentosComponent } from "./acompanhamentos.component";
 import { SharedModule } from "../shared/shared.module";
-import { MatTableModule, MatListModule } from "@angular/material";
+import { MatTableModule, MatListModule, MatSelectModule } from "@angular/material";
 import { AcompanhamentoDialogComponent } from './acompanhamento-dialog/acompanhamento-dialog.component';
 
 @NgModule({
@@ -17,7 +17,8 @@ import { AcompanhamentoDialogComponent } from './acompanhamento-dialog/acompanha
     AcompanhamentosRoutingModule, 
     SharedModule, 
     MatTableModule, 
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ],
   entryComponents:[AcompanhamentoDialogComponent]
 })

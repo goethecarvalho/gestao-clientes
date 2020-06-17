@@ -24,6 +24,26 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <mat-form-field class="form-input">
+            <mat-label>CNPJ</mat-label>
+            <input
+              autofocus
+              matInput
+              type="text"
+              formControlName="cnpj"
+              maxlength="50"
+            />
+            <mat-hint
+              *ngIf="
+                !form.controls.cnpj.pristine && form.controls.cnpj.required
+              "
+              >Campo obrigatório</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <mat-form-field class="form-input">
             <mat-label>Endereço</mat-label>
             <input
               autofocus
@@ -93,7 +113,9 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <mat-form-field class="form-input">
             <mat-label>Indicação</mat-label>
-            <input matInput type="text" formControlName="indicacao" />
+            <select matNativeControl required class="form-control" id="indicacao" formControlName="indicacao">
+              <option *ngFor="let indicacao of indicacoes" [value]="indicacao.id">{{ indicacao.nome }}</option>
+            </select>
             <mat-hint
               *ngIf="
                 !form.controls.indicacao.pristine && form.controls.indicacao.required
@@ -126,7 +148,7 @@
         >
           Salvar
         </button>
-        <button mat-raised-button routerLink="/clientes" class="ml-4">
+        <button mat-raised-button routerLink="/empresas" class="ml-4">
           Voltar
         </button>
       </div>

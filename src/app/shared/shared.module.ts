@@ -12,6 +12,8 @@ import {
   MatDialogModule
 } from "@angular/material";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { DropdownService } from './services/dropdown.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -24,7 +26,8 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     MatOptionModule,
     MatMenuModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   exports: [
     CommonModule,
@@ -36,6 +39,8 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     MatIconModule,
     MatCardModule,
     MatDialogModule
-  ]
+  ],
+  declarations: [],
+  providers: [ DropdownService ]
 })
 export class SharedModule {}

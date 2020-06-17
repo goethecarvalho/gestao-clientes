@@ -16,7 +16,7 @@ export class AppGuardService implements CanActivate {
     state: RouterStateSnapshot
   ): Promise<boolean> {
     if (await this.loginService.existeUsuarioLogado()) {
-      this.router.navigate(["clientes"]);
+      this.router.navigate(["empresas"]);
       return false;
     }
     return true;
