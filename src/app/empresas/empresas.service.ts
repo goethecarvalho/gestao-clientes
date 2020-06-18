@@ -31,6 +31,7 @@ export class EmpresasService {
   listar(): Promise<Empresa[]> {
     return this.empresas.orderBy("nome").toArray();
   }
+
   async obterPorId(id: number): Promise<Empresa> {
     const empresa = await this.empresas.get(id);
     return empresa;

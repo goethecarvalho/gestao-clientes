@@ -31,7 +31,7 @@ export class EmpresasComponent implements OnInit {
   }
 
   async carregarEmpresas() {
-    this.empresas = await this.empresasService.listar();
+    this.empresas = await this.empresasService.listar();    
   }
 
   openDialog(empresa: Empresa): void {

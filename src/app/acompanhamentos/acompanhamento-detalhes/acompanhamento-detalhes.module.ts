@@ -9,7 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   declarations: [AcompanhamentoDetalhesComponent],
   imports: [
     CommonModule,
-    AcompanhamentoDetalhesComponent,
+    AcompanhamentoDetalhesRoutingModule,
     SharedModule
   ]
 })

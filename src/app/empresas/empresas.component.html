@@ -27,16 +27,21 @@
           <div class="col cliente-cell mt-2" title="Telefone">
             {{ element.telefone }}
           </div>
-          <div class="col cliente-cell mt-2" title="Indicação">
-            <ng-container *ngIf="indicacao === 1">
-              Comercial 01
-            </ng-container>
+          <div class="col cliente-cell mt-2" title="Indicação" [ngSwitch]="indicacao">
+              <p *ngSwitchCase="'element.indicacao == 1'">Comercial 1</p>
             {{ element.indicacao }}
           </div>
           <div class="col cliente-cell mt-2" title="Data Cadastro">
             {{ element.dataCadastro }}
           </div>
           <div class="col text-right">
+              <button
+                mat-icon-button
+                [routerLink]="['acompanhamentos']"
+                title="Acompanhamentos"
+              >
+                <mat-icon>event_note</mat-icon>
+              </button>       
               <button
               mat-icon-button
               [routerLink]="['empresa-form/editar', element.id]"

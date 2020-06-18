@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
-//import { HttpClient } from '@angular/common/http';
-//import { of } from 'rxjs';
 
 import { Empresa } from "src/app/models/empresa";
 import { EmpresasService } from '../empresas.service';
