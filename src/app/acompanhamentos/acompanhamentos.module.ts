@@ -13,7 +13,7 @@ import { AcompanhamentoDialogComponent } from './acompanhamento-dialog/acompanha
     AcompanhamentoDialogComponent
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
     AcompanhamentosRoutingModule, 
     SharedModule, 
     MatTableModule, 

@@ -4,8 +4,10 @@ export class Empresa {
   public cnpj: string = "";
   public endereco: string = "";
   public bairro: string = "";
-  public contato: string = "";
+  public responsavel: string = "";
   public telefone: string;
   public indicacao: number;
   public dataCadastro: string = "";
+  public sistema: string = "";
+  public status: string = "";
 }

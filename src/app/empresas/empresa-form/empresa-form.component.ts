@@ -67,10 +67,4 @@ export class EmpresaFormComponent implements OnInit {
     const empresa = await this.empresasService.obterPorId(id);
     this.form.setValue(empresa);
   }
-
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
 }

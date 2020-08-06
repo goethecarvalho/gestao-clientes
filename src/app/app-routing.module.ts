@@ -19,6 +19,11 @@ const routes: Routes = [
     path: "acompanhamentos",
     loadChildren: () => import('./acompanhamentos/acompanhamentos.module').then(m => m.AcompanhamentosModule),
     canActivate: [LoginGuardService]
+  },
+  {
+    path: "produtos",
+    loadChildren: () => import('./produtos/produtos.module').then(m => m.ProdutosModule),
+    canActivate: [LoginGuardService]
   }
 ];
 

@@ -29,7 +29,7 @@ export class EmpresasService {
   }
 
   listar(): Promise<Empresa[]> {
-    return this.empresas.orderBy("nome").toArray();
+    return this.empresas.orderBy("id").toArray();
   }
 
   async obterPorId(id: number): Promise<Empresa> {

@@ -12,7 +12,10 @@ export class IdbService extends Dexie {
     this.version(1).stores({
       login: "++id,nome",
       empresas: "++id,nome",
-      acompanhamentos: "++id,nome"
+      acompanhamentos: "++id,nome",
+      indicacao: "++id,nome",
+      meiocontato: "++id,nome",
+      produtos: "++id,nome"
     });
   }
 }
